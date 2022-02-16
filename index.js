@@ -34,7 +34,6 @@ app.get('/api/projects', (req, res) => {
         if (results.length > 0) return res.json(results);
         return res.json([])
     })
-
 })
 
 app.listen(4300, () => {
