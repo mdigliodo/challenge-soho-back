@@ -1,14 +1,9 @@
 'use-strict';
 
-const Project = require('../db/models/project');
-
 module.exports.getProjects = async (req, res) => {
-
     try {
-        // console.log('paso aca');
-        // const projects = await firestore
-        // const data = await projects.list();
-        // if (data.empty) return res.status(404).send('No se encontraron proyectos.');
+
+        const sql = `SELECT * FROM proyectos`;
 
         const projects = [
             {
@@ -42,7 +37,6 @@ module.exports.getProjects = async (req, res) => {
                 fontColor: '#000'
             }
         ];
-
         res.status(200).send(projects)
 
 

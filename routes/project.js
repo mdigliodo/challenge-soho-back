@@ -1,11 +1,11 @@
 const express = require('express');
 
-const  { getProjects } = require('../controllers/project');
+const controller = require('../controllers/project')
 
-const router = express.Router();
+module.exports = (() => {
+    const router = new express.Router();
 
-router.get('/projects', getProjects);
+    router.get('/projects', controller.getProjects)
 
-module.exports = {
-    routes: router
-}
+    return router;
+})();
