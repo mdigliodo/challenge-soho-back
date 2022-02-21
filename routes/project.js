@@ -1,5 +1,6 @@
-const express = require('express');
+'use strict';
 
+const express = require('express');
 const controller = require('../controllers/project')
 
 module.exports = (() => {
